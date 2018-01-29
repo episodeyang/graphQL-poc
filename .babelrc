@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "flow",
+    "stage-2",
+    "es2015",
+    "react",
+    "env"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    "dynamic-import-node",
+    "transform-runtime"
+  ]
+}
+//npm install -D babel-preset-flow babel-preset-stage-2 babel-preset-es2015 babel-preset-react babel-preset-env babel-plugin-transform-class-properties babel-plugin-transform-decorators-legacy babel-plugin-dynamic-import-node babel-plugin-transform-runtime
