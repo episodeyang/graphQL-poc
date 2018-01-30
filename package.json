@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "graphql": "^0.12.3",
-    "is-browser": "^2.0.1"
+    "is-browser": "^2.0.1",
+    "require-text": "0.0.1"
   },
   "devDependencies": {
     "babel-plugin-dynamic-import-node": "^1.2.0",

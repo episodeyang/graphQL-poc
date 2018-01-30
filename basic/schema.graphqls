@@ -1,0 +1,61 @@
+type Note {
+    id: String
+    name: String
+    text: String # use text for plain text. Add binary blob later
+}
+
+# relationships to model:
+# oneHasMany, oneToMany, oneToOne, onHasOne
+
+type Bindr {
+    id: String
+    name: String
+    notes: [Note]
+    bindrs: [Bindr]
+}
+
+type Organization {
+    id: String
+    name: String
+    teams: [Team]
+    users: [User]
+    notes: [Note]
+    bindrs: [Bindr]
+}
+
+type Team {
+    id: String
+    name: String
+    users: [User]
+    notes: [Note]
+    bindrs: [Bindr]
+}
+
+type User {
+    id: String
+    name: String
+    fullName: String
+}
+
+type UserGroup {
+    id: String
+    name: String
+    users: [User]
+}
+
+type Query {
+    note(id:String): Note
+    notes(ids:[String]): [Note]
+    bindr(id:String): Bindr
+    bindrs(ids:[String]): [Bindr]
+}
+
+type Mutation {
+    note(id:String, ops:String): Note
+}
+
+
+type Schema {
+    query: Query
+    mutation: Mutation
+}
